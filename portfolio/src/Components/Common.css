@@ -1,0 +1,17 @@
+.common{
+    display: flex;
+    box-sizing: border-box;
+    padding: top 10px; 
+    background-color: var(--background-color);
+  
+    justify-content: center;
+}
+[theme="dark"] {
+    --background-color: #0a0f24; /* Dark background */
+    
+}
+
+[theme="light"] {
+    --background-color: #FFF; /* Light background */
+   
+}

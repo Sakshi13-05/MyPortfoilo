@@ -1,0 +1,121 @@
+/* Reset styles */
+nav{
+    box-sizing: border-box;
+}
+.icon-container {
+    display: flex;           /* Aligns icons in a row */
+    align-items: center;      /* Aligns icons vertically */
+    justify-content: center;  /* Centers them horizontally */
+    gap: 0px;               /* Adds spacing between icons */
+  }
+
+  button{
+    width: 50px;
+      height: 50px;
+      border-radius: 50% !important;
+      color: "white";
+    border: "none";
+    cursor: "pointer";
+    padding: 0;
+    margin: 0;
+    background-color: var(--icon-color);
+  }
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between title and links */
+    align-items: center;
+    background-color:var(--background-color);
+    color:var(--color);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Navbar title (aligned left) */
+.navbar-title {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+/* Navbar links (aligned right) */
+.navbar-links {
+    display: flex;
+    gap: 10px; /* Adds space between links */
+}
+
+/* Link styles */
+.link {
+    color: var(--color);
+    text-decoration: none;
+    font-size: 20px;
+    position: relative; /* Position context for the pseudo-element */
+    padding: 10px 15px; /* Spacing around links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+.link:hover {
+    color: var(--color); /* Change color on hover */
+}
+
+/* Active link styles */
+.link.active {
+    color: var(--color); /* Active color for the selected link */
+}
+
+/* Sliding underline effect */
+.link::after {
+    content: ''; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    height: 3px; /* Height of the underline */
+    width: 100%; /* Full width */
+    background-color: var(--color); /* Color of the underline */
+    position: absolute; /* Absolute positioning */
+    bottom: -5px; /* Positioning below the text */
+    left: 0; /* Align to the left */
+    transform: scaleX(0); /* Initially scale down to 0 */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Hover effect for underline */
+.link:hover::after, 
+.link.active::after {
+    transform: scaleX(1); /* Scale to full width on hover or active */
+}
+
+/* Prevent content from being hidden under the navbar */
+body {
+    padding-top: 60px; /* Adjust based on navbar height */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .link {
+        padding: 15px; /* Increase padding for mobile */
+    }
+}
+
+[theme="dark"]{
+    --background-color:#0a0f24;
+    --color:#FFF;
+    --icon-color:#FFF;
+
+}
+
+[theme="light"]
+{
+    --background-color:#FFF;
+    --color:darkgreen;
+    --icon-color:lightgreen;
+   
+}
+

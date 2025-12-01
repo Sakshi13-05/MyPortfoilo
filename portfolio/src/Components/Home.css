@@ -1,0 +1,70 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    max-width: 100vh;
+    max-height: 100vw;/* Ensure body and HTML take full height */
+    width: 100%;  /* Ensure body and HTML take full width */
+
+}
+
+/* Main .home section */
+.home {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space content evenly */
+    padding: 20px; /* Optional padding */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: var(--background-color); /* Apply background color based on theme */
+}
+
+/* Content (Text) on the Left */
+.home-content {
+    flex: 1;
+    max-width: 50%; /* Limit content width to 50% */
+    text-align: left; /* Align text to the left */
+    margin-top: -70px; /* Move content upwards */
+    padding-left: 5%; /* Add padding to the left */
+}
+
+.home-content p {
+    font-size: 18px;
+    color: var(--color); /* Text color based on theme */
+    
+
+}
+
+.home-content h1 {
+    font-family: "Dancing Script", cursive;
+    color: var(--headcolor); /* Header color based on theme */
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+/* Image on the Right */
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    padding-right: 5%; /* Add padding to the right */
+}
+
+.home-image img {
+    width: 100%; /* Image takes full width of its container */
+    max-width: 400px; /* Limit maximum width */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+
+[theme="dark"] {
+    --background-color: #0a0f24; 
+    --color: #FFF; 
+    --headcolor: blue; 
+}
+
+[theme="light"] {
+    --background-color: #FFF;
+    --color: #0a0f24;
+    --headcolor: darkgreen; 
+}

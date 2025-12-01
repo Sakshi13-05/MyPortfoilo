@@ -1,0 +1,96 @@
+/* Styles for the contact form */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    width: 100vw;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 100vh;
+    max-height: 100%; 
+    padding-top: 80px;
+    
+  }
+  
+  .contact label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color);
+    font-size: larger;
+    
+  }
+  
+  .contact input,
+  .contact textarea 
+  {
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height:10px;
+    width: 800px;;
+  }
+  .contact textarea{
+    height: 120px;
+  }
+  
+  #btn {
+    margin-top: 15px;
+    width: auto;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+#btn:hover {
+    background-color: var(--background-color);
+}
+  
+  
+  
+  
+  
+.social-icons {
+  display: flex;
+  gap: 20px; /* Adds space between icons */
+  justify-content: center; /* Centers icons horizontally */
+  align-items: center; /* Aligns icons vertically */
+  margin-top: 20px; /* Adds space above the icons */
+}
+
+.social-icons a {
+  text-decoration: none; /* Removes underline from links */
+  color:var(--color); /* Sets default icon color */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+  color: var(--hovercolor); /* LinkedIn icon hover color */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: var(--hovercolor); /* GitHub icon hover color */
+}
+
+.social-icons a:nth-child(3):hover {
+  color:var(--hovercolor); /* Twitter icon hover color */
+}
+
+ 
+  [theme="dark"] {
+    --background-color: #0a0f24;
+    --color: #FFF;
+    --hovercolor:#0077b5;
+    
+    
+    }
+    
+    [theme="light"] {
+    --background-color: #FFF;
+    --color: darkgreen;
+    --hovercolor:lightgreen;
+  
+    }
+  

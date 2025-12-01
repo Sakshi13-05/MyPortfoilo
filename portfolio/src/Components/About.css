@@ -1,0 +1,163 @@
+.about-title {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: var(--titlecolor);
+  text-shadow: 0 0 10px var(  --titlecolor) !important;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+  }
+ /* Timeline Container */
+.about {
+background-color: var(--background-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+max-width: 100%;
+width:100vw;
+
+}
+
+/* Fix Title Placement */
+.about h1 {
+font-size: 2.2rem;
+margin-bottom: 40px; /* Extra space before timeline */
+text-align: center;
+
+}
+
+/* Timeline Vertical Line */
+.about::before {
+content: "";
+position: absolute;
+width: 4px;
+background: var(--card-bg);
+top: 120px; /* Adjusted to start below the title */
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.about-item {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+position: relative;
+margin: 30px 0;
+}
+
+/* Glowing Dots */
+.about-dot {
+width: 16px;
+height: 16px;
+background: var(--card-bg);
+border-radius: 50%;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+box-shadow: 0 0 10px var(--card-bg);
+}
+
+/* Timeline Cards */
+.about-card {
+background: rgba(0, 255, 255, 0.1);
+border: 2px solid var(--card-bg);
+border-radius: 10px;
+padding: 20px;
+text-align: left;
+width: 50%;
+max-width: 500px;
+backdrop-filter: blur(5px);
+box-shadow: 0 0 15px var(--color-bg);
+position: relative;
+animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Alternating Card Placement */
+.about-item:nth-child(even) .about-card {
+margin-left: 55%;
+text-align: left;
+}
+
+.about-item:nth-child(odd) .about-card {
+margin-right: 55%;
+text-align: right;
+}
+
+/* Text Styling */
+.about-card h3 {
+margin: 0;
+font-size: 1rem;
+color:var(--card-bg);
+}
+
+.about-card h2 {
+font-size: 1.5rem;
+margin: 5px 0;
+color: var(--h2color);
+}
+
+.about-card h4 {
+font-size: 1.2rem;
+color:var(--hcolor);
+}
+
+.about-card p {
+font-size: 1rem;
+color: var(--pcolor);
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+.about::before {
+  left: 10px;
+}
+.about-dot {
+  left: 10px;
+}
+.about-card {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left !important;
+}
+}
+
+[theme="dark"] {
+--background-color: #0a0f24;
+--color: #FFF;
+--h2color:blue;
+--card-bg: #00f5ff;
+--time-bg:rgba(0, 255, 255, 0.1);
+--hcolor: #ddd;
+--titlecolor:whitesmoke;
+--pcolor:grey;
+
+}
+
+[theme="light"] {
+--background-color: #FFF;
+--color: #0a0f24;
+
+--card-bg:darkgreen;
+--time-bg:rgba(0, 255, 255, 0.1);
+--h2color:darkgreen;
+--titlecolor:#32de84;
+--pcolor:#32de84;
+}
+
